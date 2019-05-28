@@ -1,5 +1,6 @@
 pyparsing
 pyyaml
+pyyaml-include
 six
 enum34
 ddt

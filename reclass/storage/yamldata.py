@@ -15,8 +15,10 @@ from reclass import datatypes
 import yaml
 import os
 from reclass.errors import NotFoundError
+from yamlinclude import YamlIncludeConstructor
 
 _SafeLoader = yaml.CSafeLoader if yaml.__with_libyaml__ else yaml.SafeLoader
+YamlIncludeConstructor.add_to_loader_class(loader_class=yaml._SafeLoader)
 
 class YamlData(object):
 
